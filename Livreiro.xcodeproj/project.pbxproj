@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8154EAB21CFE025200F723B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAB11CFE025200F723B3 /* AppDelegate.swift */; };
+		8154EAB41CFE025200F723B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAB31CFE025200F723B3 /* ViewController.swift */; };
+		8154EAB71CFE025200F723B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8154EAB51CFE025200F723B3 /* Main.storyboard */; };
+		8154EABA1CFE025200F723B3 /* Livreiro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAB81CFE025200F723B3 /* Livreiro.xcdatamodeld */; };
+		8154EABC1CFE025200F723B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8154EABB1CFE025200F723B3 /* Assets.xcassets */; };
+		8154EABF1CFE025200F723B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8154EABD1CFE025200F723B3 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8154EAAE1CFE025200F723B3 /* Livreiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Livreiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8154EAB11CFE025200F723B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8154EAB31CFE025200F723B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8154EAB61CFE025200F723B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8154EAB91CFE025200F723B3 /* Livreiro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Livreiro.xcdatamodel; sourceTree = "<group>"; };
+		8154EABB1CFE025200F723B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8154EABE1CFE025200F723B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8154EAC01CFE025200F723B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8154EAAB1CFE025200F723B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8154EAA51CFE025200F723B3 = {
+			isa = PBXGroup;
+			children = (
+				8154EAB01CFE025200F723B3 /* Livreiro */,
+				8154EAAF1CFE025200F723B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8154EAAF1CFE025200F723B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8154EAAE1CFE025200F723B3 /* Livreiro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8154EAB01CFE025200F723B3 /* Livreiro */ = {
+			isa = PBXGroup;
+			children = (
+				8154EAB11CFE025200F723B3 /* AppDelegate.swift */,
+				8154EAB31CFE025200F723B3 /* ViewController.swift */,
+				8154EAB51CFE025200F723B3 /* Main.storyboard */,
+				8154EABB1CFE025200F723B3 /* Assets.xcassets */,
+				8154EABD1CFE025200F723B3 /* LaunchScreen.storyboard */,
+				8154EAC01CFE025200F723B3 /* Info.plist */,
+				8154EAB81CFE025200F723B3 /* Livreiro.xcdatamodeld */,
+			);
+			path = Livreiro;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8154EAAD1CFE025200F723B3 /* Livreiro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8154EAC31CFE025200F723B3 /* Build configuration list for PBXNativeTarget "Livreiro" */;
+			buildPhases = (
+				8154EAAA1CFE025200F723B3 /* Sources */,
+				8154EAAB1CFE025200F723B3 /* Frameworks */,
+				8154EAAC1CFE025200F723B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Livreiro;
+			productName = Livreiro;
+			productReference = 8154EAAE1CFE025200F723B3 /* Livreiro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8154EAA61CFE025200F723B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Rodrigo;
+				TargetAttributes = {
+					8154EAAD1CFE025200F723B3 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8154EAA91CFE025200F723B3 /* Build configuration list for PBXProject "Livreiro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8154EAA51CFE025200F723B3;
+			productRefGroup = 8154EAAF1CFE025200F723B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8154EAAD1CFE025200F723B3 /* Livreiro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8154EAAC1CFE025200F723B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8154EABF1CFE025200F723B3 /* LaunchScreen.storyboard in Resources */,
+				8154EABC1CFE025200F723B3 /* Assets.xcassets in Resources */,
+				8154EAB71CFE025200F723B3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8154EAAA1CFE025200F723B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8154EAB41CFE025200F723B3 /* ViewController.swift in Sources */,
+				8154EABA1CFE025200F723B3 /* Livreiro.xcdatamodeld in Sources */,
+				8154EAB21CFE025200F723B3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8154EAB51CFE025200F723B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8154EAB61CFE025200F723B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8154EABD1CFE025200F723B3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8154EABE1CFE025200F723B3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8154EAC11CFE025200F723B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8154EAC21CFE025200F723B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8154EAC41CFE025200F723B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Livreiro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rodrigo.Livreiro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8154EAC51CFE025200F723B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Livreiro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rodrigo.Livreiro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8154EAA91CFE025200F723B3 /* Build configuration list for PBXProject "Livreiro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8154EAC11CFE025200F723B3 /* Debug */,
+				8154EAC21CFE025200F723B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8154EAC31CFE025200F723B3 /* Build configuration list for PBXNativeTarget "Livreiro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8154EAC41CFE025200F723B3 /* Debug */,
+				8154EAC51CFE025200F723B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8154EAB81CFE025200F723B3 /* Livreiro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8154EAB91CFE025200F723B3 /* Livreiro.xcdatamodel */,
+			);
+			currentVersion = 8154EAB91CFE025200F723B3 /* Livreiro.xcdatamodel */;
+			path = Livreiro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8154EAA61CFE025200F723B3 /* Project object */;
+}
