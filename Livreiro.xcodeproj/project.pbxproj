@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		8154EAB21CFE025200F723B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAB11CFE025200F723B3 /* AppDelegate.swift */; };
-		8154EAB41CFE025200F723B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAB31CFE025200F723B3 /* ViewController.swift */; };
 		8154EAB71CFE025200F723B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8154EAB51CFE025200F723B3 /* Main.storyboard */; };
 		8154EABA1CFE025200F723B3 /* Livreiro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAB81CFE025200F723B3 /* Livreiro.xcdatamodeld */; };
 		8154EABC1CFE025200F723B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8154EABB1CFE025200F723B3 /* Assets.xcassets */; };
 		8154EABF1CFE025200F723B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8154EABD1CFE025200F723B3 /* LaunchScreen.storyboard */; };
+		8154EAC71CFE034500F723B3 /* ITunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAC61CFE034500F723B3 /* ITunesAPI.swift */; };
+		8154EAC91CFE0C0100F723B3 /* ListaLivrosControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAC81CFE0C0100F723B3 /* ListaLivrosControllerTableViewController.swift */; };
+		8154EACB1CFE29D400F723B3 /* CelulaLivros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EACA1CFE29D400F723B3 /* CelulaLivros.swift */; };
+		8154EACD1CFE2B7C00F723B3 /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EACC1CFE2B7C00F723B3 /* Livro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8154EAAE1CFE025200F723B3 /* Livreiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Livreiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8154EAB11CFE025200F723B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8154EAB31CFE025200F723B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8154EAB61CFE025200F723B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8154EAB91CFE025200F723B3 /* Livreiro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Livreiro.xcdatamodel; sourceTree = "<group>"; };
 		8154EABB1CFE025200F723B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8154EABE1CFE025200F723B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8154EAC01CFE025200F723B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8154EAC61CFE034500F723B3 /* ITunesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesAPI.swift; sourceTree = "<group>"; };
+		8154EAC81CFE0C0100F723B3 /* ListaLivrosControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaLivrosControllerTableViewController.swift; sourceTree = "<group>"; };
+		8154EACA1CFE29D400F723B3 /* CelulaLivros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaLivros.swift; sourceTree = "<group>"; };
+		8154EACC1CFE2B7C00F723B3 /* Livro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Livro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				8154EAB11CFE025200F723B3 /* AppDelegate.swift */,
-				8154EAB31CFE025200F723B3 /* ViewController.swift */,
+				8154EAC61CFE034500F723B3 /* ITunesAPI.swift */,
 				8154EAB51CFE025200F723B3 /* Main.storyboard */,
+				8154EACC1CFE2B7C00F723B3 /* Livro.swift */,
+				8154EACA1CFE29D400F723B3 /* CelulaLivros.swift */,
+				8154EAC81CFE0C0100F723B3 /* ListaLivrosControllerTableViewController.swift */,
 				8154EABB1CFE025200F723B3 /* Assets.xcassets */,
 				8154EABD1CFE025200F723B3 /* LaunchScreen.storyboard */,
 				8154EAC01CFE025200F723B3 /* Info.plist */,
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8154EAB41CFE025200F723B3 /* ViewController.swift in Sources */,
+				8154EACD1CFE2B7C00F723B3 /* Livro.swift in Sources */,
+				8154EAC91CFE0C0100F723B3 /* ListaLivrosControllerTableViewController.swift in Sources */,
+				8154EAC71CFE034500F723B3 /* ITunesAPI.swift in Sources */,
+				8154EACB1CFE29D400F723B3 /* CelulaLivros.swift in Sources */,
 				8154EABA1CFE025200F723B3 /* Livreiro.xcdatamodeld in Sources */,
 				8154EAB21CFE025200F723B3 /* AppDelegate.swift in Sources */,
 			);
