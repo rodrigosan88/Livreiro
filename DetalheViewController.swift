@@ -22,6 +22,17 @@ class DetalheViewController: UIViewController {
     
     @IBOutlet weak var lbPreco: UILabel!
     
+    @IBAction func compartilhar(sender: AnyObject) {
+        let shareItems = [livroAtual!.autor, livroAtual!.titulo]
+        
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        
+        //activityViewController.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypePostToWeibo, UIActivityTypeCopyToPasteboard, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
+        
+        
+        self.presentViewController(activityViewController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         carregarLivro(self.livroAtual!)
@@ -53,6 +64,20 @@ class DetalheViewController: UIViewController {
         
     }
 
+    @IBAction func salvarLivroFavorito(sender: AnyObject) {
+        
+        let livroFravoritoDAO: LivroFavoritoDAO = LivroFavoritoDAO()
+        let livroFavorito: LivroFavorito = livroFravoritoDAO.novo()
+        
+        livroFavorito.autor = livroAtual?.getAutor()
+        livroFavorito.titulo = livroAtual?.getTitulo()
+        livroFavorito.urlCapa = livroAtual?.getUrlCapa()
+        livroFavorito.preco = livroAtual?.getPreco()
+        livroFavorito.descricao = livroAtual?.getDescricao()
+        
+        livroFravoritoDAO.salvar()
+        
+    }
     /*
     // MARK: - Navigation
 

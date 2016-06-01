@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fA0-SB-5Hh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5EU-JX-7Cc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -73,7 +73,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2p-o4-NFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1694" y="257"/>
+            <point key="canvasLocation" x="2506" y="257"/>
         </scene>
         <!--Detalhe View Controller-->
         <scene sceneID="CQy-Ga-KsL">
@@ -105,7 +105,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="HzX-ek-6i4">
                                 <rect key="frame" x="20" y="257" width="280" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -115,10 +115,23 @@
                                 <color key="textColor" red="0.2171238647" green="0.24386122029999999" blue="0.80941181279999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEE-JP-1s4">
+                                <rect key="frame" x="137" y="465" width="46" height="30"/>
+                                <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="salvarLivroFavorito:" destination="h7C-fO-MJs" eventType="touchUpInside" id="spA-2J-11f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CnB-vt-5Uz"/>
+                    <navigationItem key="navigationItem" id="CnB-vt-5Uz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="dvk-uG-McK">
+                            <connections>
+                                <action selector="compartilhar:" destination="h7C-fO-MJs" id="1gh-Kj-UxL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imgCapa" destination="cwj-3Q-aN1" id="kp9-2g-XO7"/>
                         <outlet property="lbAutor" destination="ecV-KW-qGl" id="Pt1-xs-ZcI"/>
@@ -129,13 +142,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dL-KY-89h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2179" y="257"/>
+            <point key="canvasLocation" x="3051" y="581"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favoritos Table View Controller-->
+        <scene sceneID="tAW-R5-P8J">
+            <objects>
+                <tableViewController id="CNS-Qt-kd6" customClass="FavoritosTableViewController" customModule="Livreiro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" sectionHeaderHeight="28" sectionFooterHeight="28" id="D0E-bs-UbW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="minhaCelula" rowHeight="135" id="7LD-It-bgQ" customClass="CelulaLivros" customModule="Livreiro" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="135"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7LD-It-bgQ" id="ns4-7O-yRg">
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="134"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zth-Ar-RQf">
+                                            <rect key="frame" x="8" y="36" width="131" height="90"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZH-qL-dgz">
+                                            <rect key="frame" x="8" y="3" width="304" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nd1-tA-KIB">
+                                            <rect key="frame" x="147" y="70" width="165" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.2171238647" green="0.24386122029999999" blue="0.80941181279999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdA-v0-pml">
+                                            <rect key="frame" x="147" y="36" width="173" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.24537794499999999" green="0.24537794499999999" blue="0.24537794499999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="imgLivro" destination="zth-Ar-RQf" id="3Ah-VO-31V"/>
+                                    <outlet property="lbAutor" destination="QdA-v0-pml" id="rfc-TE-wmy"/>
+                                    <outlet property="lbPreco" destination="Nd1-tA-KIB" id="6EX-TN-9WP"/>
+                                    <outlet property="lbTitulo" destination="aZH-qL-dgz" id="lBB-e3-O4P"/>
+                                    <segue destination="h7C-fO-MJs" kind="show" trigger="accessoryAction" id="oKS-je-srj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CNS-Qt-kd6" id="44v-O7-dc5"/>
+                            <outlet property="delegate" destination="CNS-Qt-kd6" id="6gh-ga-LWd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Zz2-LW-EGx"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5L-fd-Opc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2506" y="924"/>
+        </scene>
+        <!--Pesquisa-->
         <scene sceneID="Gq8-V8-pLm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fA0-SB-5Hh" sceneMemberID="viewController">
+                <navigationController title="Pesquisa" automaticallyAdjustsScrollViewInsets="NO" id="fA0-SB-5Hh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Epb-7W-T6I"/>
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6pN-c5-ffp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -147,7 +224,49 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hS-9G-8xZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="257"/>
+            <point key="canvasLocation" x="2060" y="257"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nq3-dY-aXd">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5EU-JX-7Cc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZDo-Vh-9BH">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fA0-SB-5Hh" kind="relationship" relationship="viewControllers" id="uM6-0F-dVl"/>
+                        <segue destination="KIB-OI-aLt" kind="relationship" relationship="viewControllers" id="xQF-ct-2wH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhP-UK-NKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1494" y="589"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="1l2-fe-A7S">
+            <objects>
+                <navigationController title="Favoritos" automaticallyAdjustsScrollViewInsets="NO" id="KIB-OI-aLt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="8Em-4X-40M"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="myN-Fl-5bg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CNS-Qt-kd6" kind="relationship" relationship="rootViewController" id="01Y-zL-ADf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2HQ-zX-0L8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060" y="924"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oKS-je-srj"/>
+    </inferredMetricsTieBreakers>
 </document>
