@@ -13,6 +13,7 @@ class CelulaLivros: UITableViewCell {
     @IBOutlet weak var lbTitulo: UILabel!
     @IBOutlet weak var lbAutor: UILabel!
     @IBOutlet weak var lbPreco: UILabel!
+    @IBOutlet weak var imgLivro: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,7 +12,7 @@ class ListaLivrosControllerTableViewController: UITableViewController, APIProtoc
     
     var itunesApi: ITunesAPI = ITunesAPI()
     var dados: NSDictionary?
-    var titulos : [String] = []
+    var livros : [Livro] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ class ListaLivrosControllerTableViewController: UITableViewController, APIProtoc
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.titulos.count
+        return self.livros.count
     }
     
     func dadosRecebidos(dados: NSDictionary) {
@@ -50,27 +50,32 @@ class ListaLivrosControllerTableViewController: UITableViewController, APIProtoc
         
         let resultados: [AnyObject] = self.dados!.valueForKey("results") as! [AnyObject]
         
-        for livro in resultados{
-            let titulo = livro.valueForKey("trackCensoredName")! as! String
-            self.titulos.append(titulo)
+        for resultado in resultados{
+            let livro = Livro(titulo: resultado.valueForKey("trackCensoredName")! as! String, autor: resultado.valueForKey("artistName")! as! String)
+            livro.urlCapa = (resultado.valueForKey("artworkUrl100")! as! String)
+            livro.preco = (resultado.valueForKey("formattedPrice")! as! String)
+            self.livros.append(livro)
         }
         
         self.tableView.reloadData()
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("minhaCelula", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("minhaCelula", forIndexPath: indexPath) as! CelulaLivros
 
         // Configure the cell...
-        let titulo = titulos[indexPath.row]
+        let livro = livros[indexPath.row]
         
-        cell.textLabel?.text = titulo
+        cell.lbTitulo?.text = livro.titulo
+        cell.lbAutor?.text = livro.autor
+        cell.lbPreco?.text = livro.preco
+        cell.imgLivro?.image = UIImage(data: NSData(contentsOfURL: NSURL(string: livro.getUrlCapa())!)!)
 
         return cell
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        titulos = []
+        livros = []
         itunesApi.searchItunesFor(searchBar.text!)
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811496D31CFF4AEC008FE450 /* DetalheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811496D21CFF4AEC008FE450 /* DetalheViewController.swift */; };
 		8154EAB21CFE025200F723B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAB11CFE025200F723B3 /* AppDelegate.swift */; };
 		8154EAB71CFE025200F723B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8154EAB51CFE025200F723B3 /* Main.storyboard */; };
 		8154EABA1CFE025200F723B3 /* Livreiro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAB81CFE025200F723B3 /* Livreiro.xcdatamodeld */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		811496D21CFF4AEC008FE450 /* DetalheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheViewController.swift; sourceTree = "<group>"; };
 		8154EAAE1CFE025200F723B3 /* Livreiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Livreiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8154EAB11CFE025200F723B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8154EAB61CFE025200F723B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 		8154EAA51CFE025200F723B3 = {
 			isa = PBXGroup;
 			children = (
+				811496D21CFF4AEC008FE450 /* DetalheViewController.swift */,
 				8154EAB01CFE025200F723B3 /* Livreiro */,
 				8154EAAF1CFE025200F723B3 /* Products */,
 			);
@@ -152,6 +155,7 @@
 				8154EAC71CFE034500F723B3 /* ITunesAPI.swift in Sources */,
 				8154EACB1CFE29D400F723B3 /* CelulaLivros.swift in Sources */,
 				8154EABA1CFE025200F723B3 /* Livreiro.xcdatamodeld in Sources */,
+				811496D31CFF4AEC008FE450 /* DetalheViewController.swift in Sources */,
 				8154EAB21CFE025200F723B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +304,7 @@
 				8154EAC51CFE025200F723B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
