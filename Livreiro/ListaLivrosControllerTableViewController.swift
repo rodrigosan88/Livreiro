@@ -54,6 +54,7 @@ class ListaLivrosControllerTableViewController: UITableViewController, APIProtoc
             let livro = Livro(titulo: resultado.valueForKey("trackCensoredName")! as! String, autor: resultado.valueForKey("artistName")! as! String)
             livro.urlCapa = (resultado.valueForKey("artworkUrl100")! as! String)
             livro.preco = (resultado.valueForKey("formattedPrice")! as! String)
+            livro.setDescricao(resultado.valueForKey("description")! as! String)
             self.livros.append(livro)
         }
         
@@ -115,14 +116,18 @@ class ListaLivrosControllerTableViewController: UITableViewController, APIProtoc
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let detalhes: DetalheViewController = segue.destinationViewController as! DetalheViewController
+        
+        detalhes.livroAtual = self.livros[self.tableView.indexPathForCell(sender! as! (CelulaLivros))!.row]
     }
-    */
+    
 
 }

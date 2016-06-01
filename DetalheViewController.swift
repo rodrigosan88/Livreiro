@@ -9,10 +9,22 @@
 import UIKit
 
 class DetalheViewController: UIViewController {
+    
+    var livroAtual: Livro?
 
+    @IBOutlet weak var imgCapa: UIImageView!
+    
+    @IBOutlet weak var lbTitulo: UILabel!
+    
+    @IBOutlet weak var lbAutor: UILabel!
+    
+    @IBOutlet weak var txDescricao: UITextView!
+    
+    @IBOutlet weak var lbPreco: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        carregarLivro(self.livroAtual!)
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +33,25 @@ class DetalheViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func carregarLivro(livro:Livro){
+        self.lbTitulo.text = livro.getTitulo()
+        self.lbAutor.text = livro.getAutor()
+        self.lbPreco.text = livro.getPreco()
+        self.imgCapa.image = UIImage(data: NSData(contentsOfURL: NSURL(string: livro.getUrlCapa())!)!)
+        //self.txDescricao.text = livro.getDescricao()
+        
+        var str: NSAttributedString?
+        
+        do{
+            str = try NSAttributedString(data: livro.getDescricao().dataUsingEncoding(NSUnicodeStringEncoding, allowLossyConversion: true)!, options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+        }
+        catch{
+            str = NSAttributedString(string: "")
+        }
+        
+        self.txDescricao.attributedText = str
+        
+    }
 
     /*
     // MARK: - Navigation

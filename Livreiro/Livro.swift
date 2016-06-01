@@ -16,6 +16,7 @@ class Livro {
     var preco: String?
     var urlCapa: String?
     var qtdPaginas: Int?
+    var descricao: String?
     
     init (titulo: String, autor:String, editora: String, preco: String, urlCapa: String, qtdPaginas:Int){
         self.titulo = titulo
@@ -41,6 +42,18 @@ class Livro {
     
     func getUrlCapa() -> String{
         return self.urlCapa ?? ""
+    }
+    
+    func getDescricao() -> String{
+        return self.descricao ?? ""
+    }
+    
+    func setDescricao(descricao: String){
+        self.descricao = descricao
+    }
+    
+    func getPreco() -> String{
+        return self.preco ?? "FREE"
     }
 
 }
