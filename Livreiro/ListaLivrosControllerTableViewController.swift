@@ -52,8 +52,15 @@ class ListaLivrosControllerTableViewController: UITableViewController, APIProtoc
         
         for resultado in resultados{
             let livro = Livro(titulo: resultado.valueForKey("trackCensoredName")! as! String, autor: resultado.valueForKey("artistName")! as! String)
+            
             livro.urlCapa = (resultado.valueForKey("artworkUrl100")! as! String)
-            livro.preco = (resultado.valueForKey("formattedPrice")! as! String)
+            
+            if resultado.valueForKey("formattedPrice") != nil{
+                livro.preco = (resultado.valueForKey("formattedPrice") as? String)
+            } else {
+                livro.preco = "FREE"
+            }
+            
             livro.setDescricao(resultado.valueForKey("description")! as! String)
             self.livros.append(livro)
         }
