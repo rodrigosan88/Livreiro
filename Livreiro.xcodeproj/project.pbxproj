@@ -12,6 +12,7 @@
 		811496D71CFF61FD008FE450 /* LivroFavorito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811496D51CFF61FD008FE450 /* LivroFavorito.swift */; };
 		811496D91CFF6266008FE450 /* LivroFavoritoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811496D81CFF6266008FE450 /* LivroFavoritoDAO.swift */; };
 		811496DB1CFF6F17008FE450 /* FavoritosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811496DA1CFF6F17008FE450 /* FavoritosTableViewController.swift */; };
+		811496DD1CFF8DCB008FE450 /* AddFavorito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811496DC1CFF8DCB008FE450 /* AddFavorito.swift */; };
 		8154EAB21CFE025200F723B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAB11CFE025200F723B3 /* AppDelegate.swift */; };
 		8154EAB71CFE025200F723B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8154EAB51CFE025200F723B3 /* Main.storyboard */; };
 		8154EABA1CFE025200F723B3 /* Livreiro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAB81CFE025200F723B3 /* Livreiro.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 		811496D51CFF61FD008FE450 /* LivroFavorito.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LivroFavorito.swift; path = ../LivroFavorito.swift; sourceTree = "<group>"; };
 		811496D81CFF6266008FE450 /* LivroFavoritoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivroFavoritoDAO.swift; sourceTree = "<group>"; };
 		811496DA1CFF6F17008FE450 /* FavoritosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritosTableViewController.swift; sourceTree = "<group>"; };
+		811496DC1CFF8DCB008FE450 /* AddFavorito.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavorito.swift; sourceTree = "<group>"; };
 		8154EAAE1CFE025200F723B3 /* Livreiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Livreiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8154EAB11CFE025200F723B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8154EAB61CFE025200F723B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				8154EAC61CFE034500F723B3 /* ITunesAPI.swift */,
 				8154EAB51CFE025200F723B3 /* Main.storyboard */,
 				811496DA1CFF6F17008FE450 /* FavoritosTableViewController.swift */,
+				811496DC1CFF8DCB008FE450 /* AddFavorito.swift */,
 				8154EACC1CFE2B7C00F723B3 /* Livro.swift */,
 				8154EACA1CFE29D400F723B3 /* CelulaLivros.swift */,
 				8154EAC81CFE0C0100F723B3 /* ListaLivrosControllerTableViewController.swift */,
@@ -165,6 +168,7 @@
 				8154EACD1CFE2B7C00F723B3 /* Livro.swift in Sources */,
 				811496D91CFF6266008FE450 /* LivroFavoritoDAO.swift in Sources */,
 				8154EAC91CFE0C0100F723B3 /* ListaLivrosControllerTableViewController.swift in Sources */,
+				811496DD1CFF8DCB008FE450 /* AddFavorito.swift in Sources */,
 				811496DB1CFF6F17008FE450 /* FavoritosTableViewController.swift in Sources */,
 				811496D61CFF61FD008FE450 /* LivroFavorito+CoreDataProperties.swift in Sources */,
 				8154EAC71CFE034500F723B3 /* ITunesAPI.swift in Sources */,

@@ -9,5 +9,22 @@
 import UIKit
 
 class AddFavorito: UIActivity {
-
+    
+    let livrosDAO: LivroFavoritoDAO?
+    
+    init(livrosDAO: LivroFavoritoDAO){
+        self.livrosDAO = livrosDAO
+    }
+    
+    override func activityType()->String?{
+        return "AddFavorito"
+    }
+    
+    override func activityTitle()->String?{
+        return "Add Favorito"
+    }
+    
+    override func performActivity(){
+        livrosDAO!.salvar()
+    }
 }
