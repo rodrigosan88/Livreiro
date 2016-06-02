@@ -22,6 +22,10 @@
 		8154EAC91CFE0C0100F723B3 /* ListaLivrosControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EAC81CFE0C0100F723B3 /* ListaLivrosControllerTableViewController.swift */; };
 		8154EACB1CFE29D400F723B3 /* CelulaLivros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EACA1CFE29D400F723B3 /* CelulaLivros.swift */; };
 		8154EACD1CFE2B7C00F723B3 /* Livro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8154EACC1CFE2B7C00F723B3 /* Livro.swift */; };
+		818CF35F1D00A01700533E13 /* MapasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CF35E1D00A01700533E13 /* MapasViewController.swift */; };
+		818CF3611D00A16D00533E13 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818CF3601D00A16D00533E13 /* MapKit.framework */; };
+		818CF3631D00A35B00533E13 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818CF3621D00A35B00533E13 /* CoreLocation.framework */; };
+		818CF3651D00B0B700533E13 /* LivrariaAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818CF3641D00B0B700533E13 /* LivrariaAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		8154EAC81CFE0C0100F723B3 /* ListaLivrosControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaLivrosControllerTableViewController.swift; sourceTree = "<group>"; };
 		8154EACA1CFE29D400F723B3 /* CelulaLivros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CelulaLivros.swift; sourceTree = "<group>"; };
 		8154EACC1CFE2B7C00F723B3 /* Livro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Livro.swift; sourceTree = "<group>"; };
+		818CF35E1D00A01700533E13 /* MapasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapasViewController.swift; sourceTree = "<group>"; };
+		818CF3601D00A16D00533E13 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		818CF3621D00A35B00533E13 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		818CF3641D00B0B700533E13 /* LivrariaAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivrariaAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				818CF3631D00A35B00533E13 /* CoreLocation.framework in Frameworks */,
+				818CF3611D00A16D00533E13 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +68,8 @@
 		8154EAA51CFE025200F723B3 = {
 			isa = PBXGroup;
 			children = (
+				818CF3621D00A35B00533E13 /* CoreLocation.framework */,
+				818CF3601D00A16D00533E13 /* MapKit.framework */,
 				8154EAB01CFE025200F723B3 /* Livreiro */,
 				8154EAAF1CFE025200F723B3 /* Products */,
 			);
@@ -81,6 +93,8 @@
 				811496D21CFF4AEC008FE450 /* DetalheViewController.swift */,
 				8154EAC61CFE034500F723B3 /* ITunesAPI.swift */,
 				8154EAB51CFE025200F723B3 /* Main.storyboard */,
+				818CF35E1D00A01700533E13 /* MapasViewController.swift */,
+				818CF3641D00B0B700533E13 /* LivrariaAnnotation.swift */,
 				811496DA1CFF6F17008FE450 /* FavoritosTableViewController.swift */,
 				811496DC1CFF8DCB008FE450 /* AddFavorito.swift */,
 				8154EACC1CFE2B7C00F723B3 /* Livro.swift */,
@@ -173,8 +187,10 @@
 				811496D61CFF61FD008FE450 /* LivroFavorito+CoreDataProperties.swift in Sources */,
 				8154EAC71CFE034500F723B3 /* ITunesAPI.swift in Sources */,
 				8154EACB1CFE29D400F723B3 /* CelulaLivros.swift in Sources */,
+				818CF3651D00B0B700533E13 /* LivrariaAnnotation.swift in Sources */,
 				8154EABA1CFE025200F723B3 /* Livreiro.xcdatamodeld in Sources */,
 				811496D71CFF61FD008FE450 /* LivroFavorito.swift in Sources */,
+				818CF35F1D00A01700533E13 /* MapasViewController.swift in Sources */,
 				811496D31CFF4AEC008FE450 /* DetalheViewController.swift in Sources */,
 				8154EAB21CFE025200F723B3 /* AppDelegate.swift in Sources */,
 			);

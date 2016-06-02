@@ -206,6 +206,68 @@
             </objects>
             <point key="canvasLocation" x="2506" y="924"/>
         </scene>
+        <!--Mapas-->
+        <scene sceneID="2Ko-wS-k82">
+            <objects>
+                <navigationController title="Mapas" id="8Mr-mZ-XDX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mapa" id="m1o-1n-Kmi"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w3T-5Y-Cxj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gic-Os-F4j" kind="relationship" relationship="rootViewController" id="PGG-pb-eZE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cB1-dF-h6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060" y="1579"/>
+        </scene>
+        <!--Mapas View Controller-->
+        <scene sceneID="G6H-sj-DFH">
+            <objects>
+                <viewController id="gic-Os-F4j" customClass="MapasViewController" customModule="Livreiro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="abY-IU-Kn5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mpq-Bt-awf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eOd-0M-i6Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Pesquisar" translatesAutoresizingMaskIntoConstraints="NO" id="bhg-nh-IIi">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gic-Os-F4j" id="sha-9a-dbW"/>
+                                </connections>
+                            </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFv-BJ-18t">
+                                <rect key="frame" x="0.0" y="108" width="320" height="411"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="gic-Os-F4j" id="Uan-Fc-pZ1"/>
+                                    <outletCollection property="gestureRecognizers" destination="bZW-yS-YJR" appends="YES" id="PPu-Fj-DI8"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nzv-WA-Qyw"/>
+                    <connections>
+                        <outlet property="mapa" destination="dFv-BJ-18t" id="Qwa-K3-4oO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RzB-YR-GGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="2" id="bZW-yS-YJR">
+                    <connections>
+                        <action selector="marcarPino:" destination="gic-Os-F4j" id="HCj-Fu-xuY"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2506" y="1579"/>
+        </scene>
         <!--Pesquisa-->
         <scene sceneID="Gq8-V8-pLm">
             <objects>
@@ -239,11 +301,12 @@
                     <connections>
                         <segue destination="fA0-SB-5Hh" kind="relationship" relationship="viewControllers" id="uM6-0F-dVl"/>
                         <segue destination="KIB-OI-aLt" kind="relationship" relationship="viewControllers" id="xQF-ct-2wH"/>
+                        <segue destination="8Mr-mZ-XDX" kind="relationship" relationship="viewControllers" id="C14-bz-kvV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhP-UK-NKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="589"/>
+            <point key="canvasLocation" x="1354" y="1020"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="1l2-fe-A7S">
