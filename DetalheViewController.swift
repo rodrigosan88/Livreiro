@@ -14,6 +14,8 @@ class DetalheViewController: UIViewController {
     
     var livroFavoritoDAO : LivroFavoritoDAO = LivroFavoritoDAO()
 
+    var isFavorito: Bool = false
+    
     @IBOutlet weak var imgCapa: UIImageView!
     
     @IBOutlet weak var lbTitulo: UILabel!
@@ -26,13 +28,20 @@ class DetalheViewController: UIViewController {
     
     @IBAction func compartilhar(sender: AnyObject) {
         let shareItems = [livroAtual!.autor, livroAtual!.titulo]
-        let addFavorito: AddFavorito = AddFavorito(livrosDAO: self.livroFavoritoDAO)
+
+        let minhasAtividades: [UIActivity]?
         
-        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        if !isFavorito{
+            minhasAtividades = [ AddFavorito(livro: self.livroAtual!)]
+        } else {
+            minhasAtividades = nil
+        }
+        
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: minhasAtividades)
         
         
         
-        //activityViewController.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypePostToWeibo, UIActivityTypeCopyToPasteboard, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
+        activityViewController.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypePostToWeibo, UIActivityTypeCopyToPasteboard, UIActivityTypeAddToReadingList, UIActivityTypePostToVimeo]
         
         
         self.presentViewController(activityViewController, animated: true, completion: nil)
@@ -70,7 +79,7 @@ class DetalheViewController: UIViewController {
     }
 
     @IBAction func salvarLivroFavorito(sender: AnyObject) {
-        let livroFavorito: LivroFavorito = livroFravoritoDAO.novo()
+        let livroFavorito: LivroFavorito = livroFavoritoDAO.novo()
         
         livroFavorito.autor = livroAtual?.getAutor()
         livroFavorito.titulo = livroAtual?.getTitulo()
